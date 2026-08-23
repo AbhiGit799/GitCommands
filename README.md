@@ -26,4 +26,12 @@ git commit -m "Ignore node_modules folder"
 6) Push to GitHub
 git push origin main
 
+Notepad - In standard Windows Command Prompt (cmd.exe).
+==========================================================
+Run this command to open a blank file in Notepad, type your entries, and save: <br/>
+notepad .gitignore <br/>
+
+
+
+
 
