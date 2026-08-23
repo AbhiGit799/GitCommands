@@ -1,0 +1,62 @@
+Git ghpages command for react vite project
+=============================================
+
+git init
+
+npm install gh-pages --save-dev
+
+git add .
+
+git status
+
+git commit -m "first commit"
+
+git branch -M main
+
+git remote add origin https://github.com/AbhiGit799/ReactProjectToggle.git
+
+git push -u origin main
+
+Update package.json Scripts
+
+json"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+
+Note: The predeploy script automatically builds a production-ready version of your app inside a dist folder before uploading it.
+
+4. Deploy Your AppExecute the deployment command:
+
+npm run deploy
+
+The CORS errors in your screenshot happen because your app is trying to load its JavaScript and CSS files from github.com instead of your live website address github.io.
+
+This means there is a typo in your vite.config.js file or your deployment configuration.
+
+How to Fix It
+-----------------
+
+1) Open your vite.config.js file.
+
+2) Check your base path property. You likely have github.com written in it instead of just the repository name.
+
+3) Update the base property so it only contains your repository name wrapped in forward slashes:
+
+javascriptexport default defineConfig({
+  plugins: [react()],
+  base: '/ReactProjectToggle/', // Ensure it matches your repository name exactly
+})
+
+
+Next Steps
+--------------
+Save the file.
+
+Run npm run deploy again in your terminal.
+
+Hard refresh your browser page (Ctrl + F5 or Cmd + Shift + R) to clear the old cache.
