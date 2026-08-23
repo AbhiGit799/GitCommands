@@ -1,0 +1,43 @@
+For creating React Vite Project
+================================
+
+React Commands
+===============
+
+To create a modern React project, the industry-standard recommendation is to use Vite.
+
+npx create-vite@latest <DigitalClockReact> --template react
+
+npm create vite@latest my-react-app -- --template react
+
+npm run dev
+
+npm init -y
+
+npm run build
+
+npm run preview
+
+=================================================================================================================================================================
+
+Shortcut for creating react class component
+
+1) rcc
+-----------------------------------------------------------------------
+
+rfce: Generates a regular React Functional Component with an export default at the bottom.
+
+rfc: Generates a regular React Functional Component with a named export.
+
+
+=================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
