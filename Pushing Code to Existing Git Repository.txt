@@ -1,0 +1,632 @@
+✅ Step-by-Step Guide (Windows PowerShell)
+
+1) Create a .gitignore file
+Run this command in PowerShell:
+New-Item .gitignore -Type File
+
+
+2) Open .gitignore in VS Code
+Run:  code .gitignore
+
+3) Add node_modules to .gitignore
+Inside .gitignore, add:
+node_modules/
+
+4) Check if node_modules is already tracked
+Run: git rm -r --cached node_modules
+This removes the folder from Git’s index (so it won’t be pushed), but keeps it locally.
+
+5) Commit the changes
+git add .gitignore
+git commit -m "Ignore node_modules folder"
+
+6) Push to GitHub
+git push origin main
+
+
+==============================================================================================================================
+git init
+
+git add -A
+
+git commit -m "Third Commit"
+
+git branch -M Javascriptday20
+
+git remote add origin https://github.com/AbhiGit799/javascript-advance.git
+
+git push origin Javascriptday20
+
+==============================================================================================================================
+
+git init
+
+git add -A
+
+git commit -m "Third Commit"
+
+git branch -M <your new branch-name>
+
+git remote add origin https://github.com/AbhiGit799/javascript-basics.git
+
+git push origin JavaScriptday3
+
+==============================================================================================================================
+
+Ex
+==
+PS F:\React JS TS\RTCV8\JavaScriptAppLearning5> git init
+Initialized empty Git repository in F:/React JS TS/RTCV8/JavaScriptAppLearning5/.git/
+PS F:\React JS TS\RTCV8\JavaScriptAppLearning5> git add -A
+PS F:\React JS TS\RTCV8\JavaScriptAppLearning5> git commit -m "Second Commit"
+[master (root-commit) 2d3b5c8] Second Commit
+ 1 file changed, 270 insertions(+)
+ create mode 100644 day5.html
+PS F:\React JS TS\RTCV8\JavaScriptAppLearning5> git branch -M Javascriptday5
+PS F:\React JS TS\RTCV8\JavaScriptAppLearning5> git remote add origin https://github.com/AbhiGit799/javascript-intermediate.git
+PS F:\React JS TS\RTCV8\JavaScriptAppLearning5> git push origin Javascriptday5
+
+==============================================================================================================================
+
+…or create a new repository on the command line
+
+echo "# d" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin https://github.com/AbhiGit799/<repository-name>.git
+  git push -u origin main
+
+
+
+==============================================================================================================================
+
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/AbhiGit799/<repository-name>.git
+  git branch -M main
+  git push -u origin main
+
+================================================================================================================================
+
+The default branch has been renamed!
+master is now named Javascriptday4
+
+If you have a local clone, you can update it by running the following commands.
+
+git branch -m master Javascriptday4
+git fetch origin
+git branch -u origin/Javascriptday4 Javascriptday4
+git remote set-head origin -a
+
+
+=====================================================================================================================================
+
+Intellij Project JAVA
+==================
+
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/InputFromUser (main)
+$ git remote remove origin                                          
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/InputFromUser (main)
+$ git remote -v                                                     
+
+Using Git Command (inside IntelliJ terminal)
+Open the built-in terminal (View → Tool Windows → Terminal) and run:                                  
+
+git remote remove origin
+
+
+This removes the remote named origin (the default name).
+If you have other remotes (e.g., upstream), replace origin with that name:
+git remote remove upstream
+
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/InputFromUser (main)
+$ git remote -v                                                     
+origin  https://github.com/AbhiGit799/JavaFirstGitPush.git (fetch)
+origin  https://github.com/AbhiGit799/JavaFirstGitPush.git (push) 
+
+
+=====================================================================================================================================
+
+How to Connect GitHub with IntelliJ IDEA and Push Code – Complete Guide 2024 #beginnerguide #github
+
+https://www.youtube.com/watch?v=G5tvUmPe7ok
+
+========================================================================================================================================
+
+Creating file in intellij via command line
+
+
+
+========================================================================================================================================
+
+Important Note
+===============
+warning: in the working copy of 'pom.xml', LF will be replaced by CRLF the next time Git touches it
+
+That warning is Git telling you about line ending conversion between Linux/Unix (LF) and Windows (CRLF). 
+It’s not an error, just a heads‑up that the file’s line endings will be normalized the next time Git processes it.
+
+Here’s what it means and how you can handle it:
+
+
+🔎 Why You See This
+LF (Line Feed) is the newline character used on Linux/macOS.
+
+CRLF (Carriage Return + Line Feed) is the newline style used on Windows.
+
+Git tries to keep consistency across platforms. If your repo is configured to use LF internally but your working copy is on Windows, Git may convert LF → CRLF when checking out files.
+
+========================================================================================================================================
+
+git add -A
+
+The command git add -A is a shorthand to stage all changes in your working directory for the next commit.
+
+Here’s what it does in detail:
+
+📌 Meaning of git add -A
+Adds new files (untracked files).
+Stages modifications to existing tracked files.
+Stages deletions (files you removed from the working directory).
+In short: it stages everything — additions, modifications, and deletions.
+
+
+✅ Equivalent Commands
+git add -A is equivalent to:
+git add --all
+It’s also similar to:
+git add .
+
+
+but with one difference:
+git add . only stages changes in the current directory and below.
+git add -A stages changes across the entire repository.
+
+
+⚠️ Common Use Case
+After deleting a file (like your earlier pom.xml example), running:
+git add -A
+git commit -m "Remove pom.xml"
+git push
+
+========================================================================================================================================
+
+git branch -M
+
+The command git branch -M is used to rename a branch in Git.
+
+📌 Syntax
+git branch -M <new-branch-name>
+
+-M means move/rename branch and force the rename if the target branch name already exists.
+
+If you’re currently on the branch you want to rename, just run:
+git branch -M main
+This renames your current branch to main
+
+
+⚠️ Notes
+-M is stronger than -m.
+-m renames only if the new branch name doesn’t already exist.
+-M forces the rename even if the new name exists (overwrites).
+
+Common use case: renaming master → main.
+
+=================================================================================================================================================
+
+git push -u origin main
+
+The command git push -u origin main is used to push your local main branch to the remote repository (usually GitHub, GitLab, or Bitbucket) and set up tracking so future pushes/pulls are easier.
+
+📌 Breakdown of the Command
+git push → sends your local commits to the remote repository.
+
+-u (or --set-upstream) → tells Git to remember the remote branch you’re pushing to. After this, you can just run git push or git pull without specifying origin main.
+
+origin → the default name of your remote repository (you can check with git remote -v).
+
+main → the branch you’re pushing. This is often the default branch (previously master).
+
+
+=================================================================================================================================================
+
+Delete the File From Git Repository,But not deleting from Local Machine.
+****************************************************************
+
+Remove the file from Git tracking and your working directory 
+If you want to keep the file locally but just stop tracking it in Git:
+Command => git rm --cached filename
+
+Commit the deletion
+Command => git commit -m "Remove unwanted file"
+
+Push the change to the remote repository
+Command => git push
+
+
+Ex:
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git rm --cached src/main/java/Display.java <--------------------------------------------------{Command}
+rm 'src/main/java/Display.java'
+
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git commit -m "Stop tracking Display.java"<--------------------------------------------------{Command}
+[main c7ddc2b] Stop tracking Display.java
+ 1 file changed, 5 deletions(-)
+ delete mode 100644 src/main/java/Display.java
+
+
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git push<------------------------------------------------------------------------------------------{Command}
+fatal: unable to access 'https://github.com/AbhiGit799/IntellijToGit.git/': Could not resolve host: github.com
+
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ ping github.com<-------------------------------------------------------------------------------{Command}
+
+Pinging github.com [20.207.73.82] with 32 bytes of data:
+Reply from 20.207.73.82: bytes=32 time=7ms TTL=115
+Reply from 20.207.73.82: bytes=32 time=8ms TTL=115
+Reply from 20.207.73.82: bytes=32 time=9ms TTL=115
+Reply from 20.207.73.82: bytes=32 time=16ms TTL=115
+
+Ping statistics for 20.207.73.82:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 7ms, Maximum = 16ms, Average = 10ms
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git push<-------------------------------------------------------------------------------------------{Command}       
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 397 bytes | 397.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.        
+To https://github.com/AbhiGit799/IntellijToGit.git
+   e31e339..c7ddc2b  main -> main
+
+
+==================================================================================================================================================================
+
+Now again I want to send Display.java file back to git repo?
+**************************************************
+
+Got it 👍 — if you want to send Display.java back into your GitHub repo after previously removing it, here’s the clean workflow you can run right inside IntelliJ’s Terminal:
+
+🖥️ Step‑by‑Step Commands
+1) Make sure the file exists locally  
+Check that Display.java is present in your project folder (e.g. src/.../Display.java).
+
+2) Stage the file again  
+Use the exact path (Git is case‑sensitive):
+git add src/main/java/com/example/Display.java <-----------------------------{Command}
+
+
+3) Commit the change
+git commit -m "Add Display.java back to repo"
+
+
+4) Push to remote
+git push origin main
+
+
+
+🔍 Quick Checks
+Run:
+git status
+
+to confirm Display.java is staged before committing.
+If you see it under Untracked files, it means Git isn’t tracking it yet — git add will fix that.
+If you see nothing, double‑check the file path and spelling.
+
+
+Example
+========
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git add src/main/java/Display.java <----------------------------------------------------------------------------------------------------{Command}
+
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git commit -m "Add Display.java back to repo"<----------------------------------------------------------------------------------------------------{Command}
+[main 6dee298] Add Display.java back to repo
+ 1 file changed, 5 insertions(+)
+ create mode 100644 src/main/java/Display.java
+
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git push<-----------------------------------------------------------------------------------------------------------------{Command}
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 539 bytes | 539.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.        
+To https://github.com/AbhiGit799/IntellijToGit.git
+   c7ddc2b..6dee298  main -> main
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git status<----------------------------------------------------------------------------------------------------------------{Command}
+On branch main
+Your branch is up to date with 'origin/main'.
+nothing to commit, working tree clean
+
+
+
+==================================================================================================================================================================
+
+Now I updated Display.java file and want to put latest updates back to git repo?
+********************************************************************
+
+Perfect — since you’ve updated Display.java locally and now want to push the latest changes back to your GitHub repo, here’s the exact workflow you can run in IntelliJ’s Terminal:
+
+🖥️ Commands to Push Updated File
+
+1)Check status  
+See what Git recognizes as changed:
+git status<------------------------------------------------------------------{Command}
+You should see Display.java listed under modified files.
+
+2) Stage the updated file  
+Add the file to the staging area:
+git add Display.java<------------------------------------------------------------------{Command}
+(use the correct path if it’s inside a folder, e.g. src/.../Display.java)
+
+3) Commit the changes  
+Save the update in your local repo:
+git commit -m "Update Display.java with latest changes"<------------------------------------------------------------------{Command}
+
+
+4) Push to remote  
+Send the commit to GitHub:
+git push origin main<------------------------------------------------------------------{Command}
+
+
+
+✅ Quick Notes
+If you previously set upstream with git push -u origin main, you can now just run:
+git push
+
+Always check git status first — it confirms whether Git sees your changes.
+
+If Display.java doesn’t show up, double‑check the file path or whether it’s ignored in .gitignore.
+
+
+Examples
+-------------
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git status<-----------------------------------------------------------------------------------------------------{Command}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/main/java/Display.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git add src/main/java/Display.java<-----------------------------------------------------------------------------------------------------{Command}
+
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git commit -m "Update Display.java with latest changes"<-----------------------------------------------------------------------------------------------------{Command}
+[main 086820a] Update Display.java with latest changes
+ 1 file changed, 1 insertion(+)
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/PracticeJavaToGit (main)
+$ git push<--------------------------------------------------------------------------------------------------------------------{Command}
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 530 bytes | 530.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+To https://github.com/AbhiGit799/IntellijToGit.git
+   6dee298..086820a  main -> main
+
+
+======================================================================================================================================================================
+
+How to add a git ignore file to intellij project
+
+https://www.youtube.com/watch?v=yJ22w9Na720
+
+
+======================================================================================================================================================================
+
+
+Case => When Repo updated but local not
+************************************
+
+hp@LAPTOP-OIHMLL23 MINGW64 /d/IntelliJ Projects/RandomJavaTopics (main)
+$ git push
+To https://github.com/AbhiGit799/RandomJavaTopics.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/AbhiGit799/RandomJavaTopics.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+Answer =>
+
+This error happens because your local main branch is behind the remote main branch on GitHub. 
+In other words, there are commits on GitHub that you don’t have locally, so Git is preventing you from overwriting them.
+
+Here’s how you can fix it step by step:
+
+✅ Safe Approach (merge remote changes into your local branch)
+1) Fetch the latest changes from GitHub:
+
+git fetch origin
+
+
+2) Merge the remote main into your local main:
+
+git merge origin/main
+
+If there are conflicts, Git will stop and ask you to resolve them manually.
+After resolving conflicts, commit the merge.
+
+
+Push your changes back to GitHub:
+git push origin main
+
+
+⚡ Alternative (rebase instead of merge, keeps history cleaner)
+
+1) Fetch and rebase:
+git pull --rebase origin main
+
+This applies your local commits on top of the remote commits.
+If conflicts occur, resolve them, then continue with:
+ git rebase --continue
+
+Push after successful rebase:
+git push origin main
+
+
+🚨 Force Push (only if you’re sure you want to overwrite remote history)
+If you know the remote changes aren’t needed (e.g., you created the repo and only want your local state), you can force push:
+git push origin main --force
+
+
+⚠️ Be careful: this will overwrite the remote branch history and discard commits that exist only on GitHub.
+
+
+👉 Since you’re methodical and persistent with Git troubleshooting, I’d recommend the rebase approach (git pull --rebase) because it keeps the commit history linear and clean.
+
+=====================================================================================================================================================================
+
+How to push all the latest changes to github repo?
+*******************************************
+
+To push all your latest changes to a GitHub repository, here’s the step-by-step workflow you can follow:
+
+🛠 Steps to Push Changes to GitHub
+Check the current status of your repo
+git status<----------------------------------------------------------------Command
+This shows modified, new, or deleted files that haven’t been committed yet.
+
+Stage all changes
+git add .<----------------------------------------------------------------Command
+The . stages all files in the current directory.
+
+Alternatively, you can stage specific files:
+
+git add filename.java<----------------------------------------------------------------Command
+Commit the changes with a message
+
+
+git commit -m "Your commit message here"<----------------------------------------------------------------Command
+Write a clear, descriptive message (e.g., "Fixed login bug" or "Added new test cases").
+
+Push to the remote repository
+
+git push origin branch-name<----------------------------------------------------------------Command
+Replace branch-name with the branch you’re working on (commonly main or master).
+
+Example:
+git push origin main<----------------------------------------------------------------Command
+⚡ Common Issues & Fixes
+Authentication error:
+Make sure you’ve set up SSH keys or a personal access token (PAT) for HTTPS.
+
+Branch mismatch:
+If your local branch doesn’t exist on GitHub yet, create it first:
+
+
+git push -u origin branch-name<----------------------------------------------------------------Command
+The -u sets the upstream branch so future pushes can be done with just git push.
+
+Merge conflicts:
+If GitHub has changes not in your local repo, pull first:
+
+bash
+git pull origin branch-name<----------------------------------------------------------------Command
+Resolve conflicts, then push again.
+
+
+✅ Quick one-liner if you want to push everything directly:
+==================================================
+
+git add . && git commit -m "Update" && git push origin main <-----------------One Line command
+
+Since you’re already comfortable with advanced Git operations, 
+
+do you want me to also show you how to force-push (overwriting remote changes) or how to push multiple branches at once?
+
+=========================================================================================================================================================================
+
+Git Command To Push all the newly created file To Github Repo
+******************************************************
+
+# Stage all untracked files
+git add .
+
+# Commit them with a message
+git commit -m "Add TypeScript and JavaScript practice files"
+
+# Push to your remote main branch
+git push origin main
+
+
+
+Explanation
+===========
+git add . → adds all files in the current directory (including your .ts, .js, .txt files) to the staging area.
+
+git commit -m "..." → creates a snapshot of those staged files with a descriptive message.
+
+git push origin main → uploads your commit(s) to the main branch on GitHub.
+
+=========================================================================================================================================================================
+
+
+how to get git repo name in vscode
+
+git remote -v
+
+=========================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
