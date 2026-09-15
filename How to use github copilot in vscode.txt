@@ -1,0 +1,46 @@
+How to use github copilot in vscode ?
+
+To use GitHub Copilot in Visual Studio Code for explaining your project structure, you should primarily use the @workspace participant in the Copilot Chat view.
+
+This participant is specifically designed to understand the context of your entire codebase, including file relationships and directory layout
+
+1. Access Copilot ChatKeyboard Shortcut: Press Ctrl + Alt + I (Windows/Linux) or Cmd + Ctrl + I (macOS) to open the Chat view.
+
+Activity Bar: Click the Chat icon (speech bubble with the Copilot logo) in the left-hand sidebar.
+
+
+2. Use the @workspace ParticipantTo get a project-wide overview rather than just an explanation of a single file, start your prompt with @workspace
+
+
+To explain the folder structure:@workspace explain the project structure and folder layout.
+
+
+To understand how files relate to each other:@workspace how does this project's architecture work?
+
+
+To find where specific logic is located:@workspace where is the main entry point and how are the routes structured?
+
+
+3. Use Slash Commands and VariablesFor more specific structure-related tasks, you can combine participants with GitHub Copilot Chat slash commands and variables:
+
+/explain: Use @workspace /explain to get a high-level summary of the entire project's purpose and organization.
+
+#project: You can include the #project variable in your prompt to explicitly tell Copilot to consider the whole project context.
+
+/init: If you are starting a new project, typing /init helps Copilot analyze your codebase and create custom instructions for better future context
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
