@@ -1,0 +1,55 @@
+forked meaning in githubIn GitHub
+******************************
+
+A fork is a new repository that shares the same code and visibility settings as the original "upstream" repository. 
+It is essentially a copy of someone else's project that you save to your own account, allowing you to make changes without affecting the original.
+
+
+
+Why use a Fork?
+----------------------
+Forking is a core part of collaborative development, particularly in open-source projects. Common uses include
+
+Proposing Changes: If you find a bug or want to add a feature to someone else's project, 
+you fork it, make the fix in your copy, and then submit a pull request to suggest your changes be merged into the original project.
+
+Experimentation: You can freely experiment with new ideas or alternate versions of a project without risking the stability of the original source.
+
+Starting New Projects: You can use an existing repository as a foundation for a completely new, independent idea.
+
+
+
+Fork vs. Clone vs. Branch
+-----------------------------------
+While these terms are related, they serve different purposes:
+
+Fork: Creates a server-side copy on GitHub that you own.
+
+Clone: Creates a local copy of a repository on your computer so you can work on files offline.
+
+Branch: A way to work on different versions of a project within the same repository.
+
+
+
+
+How to Fork
+------------------
+To fork a repository on the web, navigate to the project's page on GitHub and click the "Fork" button in the top-right corner. 
+For command-line users, the GitHub CLI allows you to use the command gh repo fork REPOSITORY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
